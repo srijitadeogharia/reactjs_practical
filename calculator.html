@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Calculator</title>
+</head>
+<body>
+    <center>
+
+ 
+  <div style="width: 300px; margin: 0; border:3px solid burlywood; padding:20px; ">
+
+     <h2>Calculator</h2>
+  <input type="text" id="result" readonly style="width: 160px;"><br><br>
+  
+  <button onclick="append('1')">1</button>
+  <button onclick="append('2')">2</button>
+  <button onclick="append('3')">3</button>
+  <button onclick="append('+')">+</button><br>
+  
+  <button onclick="append('4')">4</button>
+  <button onclick="append('5')">5</button>
+  <button onclick="append('6')">6</button>
+  <button onclick="append('-')">-</button><br>
+  
+  <button onclick="append('7')">7</button>
+  <button onclick="append('8')">8</button>
+  <button onclick="append('9')">9</button>
+  <button onclick="append('*')">*</button><br>
+  
+  <button onclick="append('0')">0</button>
+  <button onclick="append('.')">.</button>
+  <button onclick="clearResult()">C</button>
+  <button onclick="append('/')">/</button><br><br>
+  
+  <button onclick="calculate()">=</button>
+    </div>
+  <script>
+    function append(value) {
+      document.getElementById("result").value += value;
+    }
+
+    function clearResult() {
+      document.getElementById("result").value = "";
+    }
+
+    function calculate() {
+      try {
+        document.getElementById("result").value = eval(document.getElementById("result").value);
+      } catch (e) {
+        alert("Invalid Expression");
+      }
+    }
+  </script>
+  </center>
+</body>
+</html>
