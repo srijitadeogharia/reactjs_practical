@@ -1,9 +1,8 @@
-function checkodd_even(n){
-    if (n % 2 == 0){
-        console.log("The number is even");
+for (let i = 1 ; i<=10 ; i++){
+    if (i%2==0){
+        console.log(i +" even number")
     }
-    else (n % 2 == 1);{
-        console.log("The number is not even");
+    else {
+        console.log(i+ " odd number")
     }
 }
-checkodd_even(9)
