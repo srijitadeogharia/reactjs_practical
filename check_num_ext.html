@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body bgcolor = "lightblue">
+    <input type='text' value='default text' />
+   <h1>HII WELCOME !!</h1> 
+   <p id = "checknum"></p>
+   <script>
+    let num = prompt("Please enter the number:")
+if (num >= 0){
+    document.getElementById("checknum").innerHTML= (`The ${num} is positive😁`)
+}
+else if(num < 0){
+    document.getElementById("checknum").innerHTML= (`The ${num} is negative😪`)
+}
+else if(num == 0){
+    document.getElementById("checknum").innerHTML= (`The ${num} is equal to zero👻`)
+}
+else{
+    document.getElementById("checknum").innerHTML= ("🤦‍♂️🤔")
+}
+   </script>
+</body>
+</html>

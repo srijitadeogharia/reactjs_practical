@@ -1,13 +1,13 @@
-let num = 0;
-if (num > 0){
-    console.log("The number is positive");
+let num = prompt("Please enter the number:")
+if (num >= 0){
+    document.getElementById("checknum").innerHTML= (`The ${num} is positive`)
 }
-else if (num < 0){
-    console.log("The number is negative");
+else if(num < 0){
+    document.getElementById("checknum").innerHTML= (`The ${num} is negative`)
 }
-else if (num == 0){
-    console.log("The number is zero");
+else if(num == 0){
+    document.getElementById("checknum").innerHTML= (`The ${num} is equal to zero`)
 }
-else {
-    console.log("Input valid number");
+else{
+    document.getElementById("checknum").innerHTML= ("Enter valid input")
 }
