@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Registration Form </title>
+    <script src ="registration.js"></script>
+</head>
+<body>
+    <div class = "main" style="text-align:center; margin-top:50px;">
+        <u><h2>Registration form for students</h2></u>
+        <form>
+            <label for="first">Your full name:</label>
+            <input type="text" id="first" name="first" >
+            <br><br>
+            
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+            <br><br>
+            
+            <label for="DOB">Date of birth:</label>
+            <input type="date" id="DOB" name="DOB">
+            <br><br>
+
+            
+            <label for="gender">Gender:</label>
+            <select name="gender" id="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            <br><br>
+            
+            <label for="phone number">Phone number:</label>
+            <input type="tel" id="phone number" name="phone number">
+            <br><br>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="2" cols="25" required></textarea>
+            <br><br>
+
+            <label for="course">Select your course:</label>
+            <br>
+            <label for="course">BCA</label>
+            <input type="checkbox" id = "course" name = "course" value = "BCA">
+            <br>
+
+            <label for="course">BBA</label>
+            <input type="checkbox" id = "course" name = "course" value = "BBA">
+            <br>
+
+            <label for="course">B.com</label>
+            <input type="checkbox" id = "course" name = "course" value = "B.com">
+            <br>
+
+            <label for="course">B.tech</label>
+            <input type="checkbox" id = "course" name = "course" value = "BA ADMINISTRATION">
+            <br><br>
+
+            <input type="submit" value="submit" id = "submit" >
+            <input type="reset" value="reset">
+
+        </form>
+    </div>
+</body>
+</html>
