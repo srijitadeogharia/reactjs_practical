@@ -1,19 +1,30 @@
-let a = 10
-let b = 20
-let sum = a+b
-console.log(sum)
+  // Append number or operator to the input box
+  function append(value) {
+    let box = document.getElementById("result");
+    box.value = box.value + value;
+  }
 
-let c = 10
-let d = 20
-let sub = c-d
-console.log(sub)
+  // Clear the whole input box (AC button)
+  function clearResult() {
+    let box = document.getElementById("result");
+    box.value = "";
+  }
 
-let e = 10
-let f = 20
-let mult = e*f
-console.log(mult)
+  // Delete the last character (DEL button)
+  function deleteOne() {
+    let box = document.getElementById("result");
+    box.value = box.value.slice(0, -1);
+  }
 
-let g = 100
-let h = 2
-let div = g/h
-console.log(div)
+  // Calculate the result when "=" button is pressed
+  function calculate() {
+    let box = document.getElementById("result");
+    let expression = box.value;
+
+    try {
+      let answer = eval(expression); // evaluate the math expression
+      box.value = answer;
+    } catch (error) {
+      alert("Invalid Expression");
+    }
+  }
