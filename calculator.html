@@ -5,16 +5,33 @@
 </head>
 <body>
     <center>
+        <h2>Simple Calculator</h2>
+      <script src="cal.js"></script>
+    <input type="text" id="result" class ="display">
+    <br><br>
+    <style>
+      .display {
+        width: 200px;
+        height: 40px;
+        font-size: 24px;
+        text-align: right;
+        margin-bottom: 10px;
+      }
+      button {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        margin: 5px;
+      }
+      .border {
+        border: 1px solid #975e98;
+        border-radius: 5px;
+      }
+    </style>
 
- 
-  <div style="width: 300px; margin: 0; border:3px solid burlywood; padding:20px; ">
-
-     <h2>Calculator</h2>
-  <input type="text" id="result" readonly style="width: 160px;"><br><br>
-  
-  <button onclick="append('1')">1</button>
-  <button onclick="append('2')">2</button>
-  <button onclick="append('3')">3</button>
+    <button onclick="append('1')">1</button>
+    <button onclick="append('2')">2</button>
+    <button onclick="append('3')">3</button>
   <button onclick="append('+')">+</button><br>
   
   <button onclick="append('4')">4</button>
@@ -31,78 +48,15 @@
   <button onclick="append('.')">.</button>
   <button onclick="clearResult()">AC</button>
   <button onclick="append('/')">/</button><br>
-  <button onclick ="clearResult()">DEL</button><br><br>
-  
+  <button onclick ="deleteOne()" >DL</button><br><br>
+
   <button onclick="calculate()">=</button>
-    </div>
-  <script>
-    function append(value) {
-      document.getElementById("result").value += value;
-    }
-
-    function clearResult() {
-      document.getElementById("result").value = ""; `${previousInput} ${currentOperation} ${currentInput}`;
-    }
-
-    function appendOperation(operation) {
-    if (currentInput === '') return;
-    if (previousInput !== '') {
-        calculate(); 
-    }
-    currentOperation = operation;
-    previousInput = currentInput;
-    currentInput = '';
-    document.getElementById('display').value = `${previousInput} ${currentOperation}`;
-}
-
-function calculate() {
-    if (previousInput === '' || currentInput === '') return;
-    let result;
-    let prev = parseFloat(previousInput);
-    let current = parseFloat(currentInput);
-
-    switch (currentOperation) {
-        case '+':
-            result = prev + current;
-            break;
-        case '-':
-            result = prev - current;
-            break;
-        case '*':
-            result = prev * current;
-            break;
-        case '/':
-            if (current === 0) {
-                alert("Cannot divide by zero");
-                return;
-            }
-            result = prev / current;
-            break;
-        default:
-            return;
-    }
-
-    currentInput = result.toString();
-    currentOperation = '';
-    previousInput = '';
-    document.getElementById('display').value = currentInput;
-}
-
-function clearDisplay() {
-    currentInput = '';
-    previousInput = '';
-    currentOperation = '';
-    document.getElementById('display').value = '';
-}
-
-    function calculate() {
-      try {
-        document.getElementById("result").value = eval(document.getElementById("result").value);
-      } catch (e) {
-        alert("Invalid Expression");
-      }
-    }
+    
+  </center>
+</body>
+</html>
   </script>
   </center>
 </body>
 </html>
+
